@@ -1,0 +1,13 @@
+--- config.mk.orig	2015-04-05 23:33:56.209479336 +0900
++++ config.mk	2015-04-05 23:35:55.219477205 +0900
+@@ -15,8 +15,8 @@
+ XINERAMAFLAGS = -DXINERAMA
+ 
+ # includes and libs
+-INCS = -I.  -I${X11INC}
+-LIBS =  -lc -L${X11LIB} -lX11 ${XINERAMALIBS}
++INCS = -I.  -I${X11INC} -I/usr/include/freetype2
++LIBS =  -lc -L${X11LIB} -lX11 ${XINERAMALIBS} -lXft
+ 
+ # flags
+ CPPFLAGS = -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}
